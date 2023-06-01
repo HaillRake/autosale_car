@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
+<defs>
+<font id="phone" horiz-adv-x="1000" >
+<font-face font-family="phone" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="search" unicode="&#xe805;" d="M643 386q0 103-73 176t-177 74-177-74-73-176 73-177 177-73 177 73 73 177z m286-465q0-29-22-50t-50-21q-30 0-50 21l-191 191q-100-69-223-69-80 0-153 31t-125 84-84 125-31 153 31 152 84 126 125 84 153 31 153-31 125-84 84-126 31-152q0-123-69-223l191-191q21-21 21-51z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="info" unicode="&#xf129;" d="M357 100v-71q0-15-10-25t-26-11h-285q-15 0-25 11t-11 25v71q0 15 11 25t25 11h35v214h-35q-15 0-25 11t-11 25v71q0 15 11 25t25 11h214q15 0 25-11t11-25v-321h35q15 0 26-11t10-25z m-71 643v-107q0-15-11-25t-25-11h-143q-14 0-25 11t-11 25v107q0 14 11 25t25 11h143q15 0 25-11t11-25z" horiz-adv-x="357.1" />
+
+<glyph glyph-name="cab" unicode="&#xf1b9;" d="M268 243q0 37-26 63t-63 26-63-26-27-63 27-63 63-26 63 26 26 63z m20 178h567l-50 200q-1 4-8 9t-11 6h-429q-5 0-12-6t-7-9z m766-178q0 37-27 63t-63 26-63-26-26-63 26-63 63-26 63 26 27 63z m89 53v-214q0-8-5-13t-13-5h-54v-71q0-45-31-76t-76-31-76 31-31 76v71h-571v-71q0-45-31-76t-76-31-76 31-32 76v71h-53q-8 0-13 5t-5 13v214q0 52 37 89t88 36h16l58 234q13 53 58 88t100 36h429q54 0 100-36t58-88l58-234h16q52 0 88-36t37-89z" horiz-adv-x="1142.9" />
+
+<glyph glyph-name="map-pin" unicode="&#xf276;" d="M286 243q37 0 71 8v-365q0-15-10-25t-26-11h-71q-14 0-25 11t-11 25v365q35-8 72-8z m0 607q118 0 202-84t83-202-83-202-202-83-202 83-84 202 84 202 202 84z m0-125q8 0 13 5t5 13-5 13-13 5q-82 0-139-58t-58-139q0-7 5-12t13-6 13 6 5 12q0 67 47 114t114 47z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="credit-card-alt" unicode="&#xf283;" d="M0 11v339h1286v-339q0-37-26-63t-64-27h-1107q-36 0-63 27t-26 63z m357 125v-72h214v72h-214z m-214 0v-72h143v72h-143z m1053 643q37 0 64-27t26-63v-125h-1286v125q0 37 26 63t63 27h1107z" horiz-adv-x="1285.7" />
+</font>
+</defs>
+</svg>
