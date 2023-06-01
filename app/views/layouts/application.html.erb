@@ -1,19 +1,283 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CarsManagement</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../car_DP_2023-main/site/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="site/img/sell.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="site/css/fontello.css">
+    <link rel="stylesheet" href="../car_DP_2023-main/site/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>GhostSeller</title>
+</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'share/header' %>
-    <%= yield %>
-  </body>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Головна</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Автомобілі</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Про наш сервіс
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Місцезнаходження</a></li>
+                          <li><a class="dropdown-item" href="#">Контакти</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Instagram</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Зворотній зв'язок</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Пошук</button>
+                    </form>
+                  </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="jumbotron text-center">
+          <h1 class="display-4">Ласкаво просимо до нашого автосалону</h1>
+          <p class="lead">Ми пропонуємо широкий вибір автомобілів найвищої якості за найкращими цінами.</p>
+          
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <h1 class="container-search">Знайдіть своє авто за даними критеріями</h1>
+                <form class="search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="car-type">Тип авто:</label>
+                            <select id="car-type">
+                                <option value="">Легкові</option>
+                                <option value="Мото">Мото</option>
+                                <option value="Вантажівки">Вантажівки</option>
+                                <option value="Автобуси">Автобуси</option>
+                                <option value="Спецтехніка">Спецтехніка</option>
+                                <option value="Сільгосптехніка">Сільгосптехніка</option>
+                                <!-- Додайте інші варіанти типів авто -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-make">Марка:</label>
+                            <select id="car-type">
+                                <option value="">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="Mersedes-Benz">Mersedes-Benz</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Opel">Opel</option>
+                                <option value="Renault">Renault</option>
+                                <option value="Skoda">Skoda</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Lada">Lada</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-model">Модель:</label>
+                            <input type="text" id="car-model">
+                        </div>
+                        <div class="form-group">
+                            <label for="car-region">Регіон:</label>
+                            <select id="car-type">
+                                <option value="Київська обл.">Київська обл.</option>
+                                <option value="Вінницька обл.">Вінницька обл.</option>
+                                <option value="Волинська обл.">Волинська обл.</option>
+                                <option value="Дніпропетровська обл.">Дніпропетровська обл.</option>
+                                <option value="Донецька обл.">Донецька обл.</option>
+                                <option value="Житомирська обл.">Житомирська обл.</option>
+                                <option value="Закарпатська обл.">Закарпатська обл.</option>
+                                <option value="Запорізька обл.">Запорізька обл.</option>
+                                <option value="Івано-Франківська обл.">Івано-Франківська обл.</option>
+                                <option value="Лівівська обл.">Лівівська обл.</option>
+                                <option value="Миколаївська обл.">Миколаївська обл.</option>
+                                <option value="Одеська обл.">Одеська обл.</option>
+                                <option value="Полтавська обл.">Полтавська обл.</option>
+                                <option value="Рівненська обл.">Рівненська обл.</option>
+                                <option value="Сумська обл.">Сумська обл.</option>
+                                <option value="Тернопільська обл.">Тернопільська обл.</option>
+                                <option value="Харківська обл.">Харківська обл.</option>
+                                <option value="Хмельницька обл.">Хмельницька обл.</option>
+                                <option value="Черкаська обл.">Черкаська обл.</option>
+                                <option value="Чернівецька обл.">Чернівецька обл.</option>
+                                <option value="Чернігівська обл.">Чернігівська обл.</option>
+                            </select>
+                        </div>
+                        <label for="year">Рік випуску:</label>
+                        <input type="checkbox" id="yearToggle">
+                            <div class="year-inputs">
+                                <input type="text" class="form-control rectangle-input" id="year-from" placeholder="Від">
+                                <input type="text" class="form-control rectangle-input" id="year-to" placeholder="До">
+                            </div>                        
+                        </div>
+                        <div class="form-group">
+                            <label for="car-price">Ціна:</label>
+                            <input type="text" id="car-price">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="forwhom">
+            <div class="container-fluid mt-5 pb-1">
+                <h1 class="container-title">Топові пропозиції!</h1>
+              <div class="row no-gutters">
+                <div class="col-sm-4">
+                  <div class="p-3">
+                    <figure>
+                      <img src="../car_DP_2023-main/site/img/mers_b.jpg" class="card-img-top" alt="Зображення автомобіля">
+                      <figcaption class="price">$44 900</figcaption>
+                      <figcaption class="description">Mersedes-Benz S500 W222 2014р. 125 000 км.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-sm-8 d-flex align-items-center">
+                  <div class="row" style="height: 100vh;">
+                    <div class="col-4">
+                        <figure>
+                            <img src="../car_DP_2023-main/site/img/bmw_m4.jpg" class="card-img-top" alt="Зображення автомобіля">
+                            <figcaption class="price">$120 000</figcaption>
+                            <figcaption class="description">BMW M4 F90 2021р. 3 000 км.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-4">
+                        <figure>
+                            <img src="../car_DP_2023-main/site/img/wv-b.jpg" class="card-img-top" alt="Зображення автомобіля">
+                            <figcaption class="price">$32 500</figcaption>
+                            <figcaption class="description">Volkswagen ID4 X PRO 2020р. 85 000 км.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-4">
+                      <figure>
+                        <img src="../car_DP_2023-main/site/img/lexus_b.jpg" class="card-img-top" alt="Зображення автомобіля">
+                        <figcaption class="price">$47 500</figcaption>
+                        <figcaption class="description">Lexus RX 350 2018р. 150 000 км.</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+            <section class="row">
+                <h1 class="container-new">Новинки</h1>
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <img src="../car_DP_2023-main/site/img/skoda_octavia_rs.jpg" class="card-img-top" alt="Зображення автомобіля">
+                        <div class="card-body">
+                            <h5 class="card-title">Skoda Octavia RS iV 19 992 $</h5>
+                            <p class="card-text">Нова SKODA OCTAVIA RS iV оснащена бензиновим двигуном 1.4 TSI і електродвигуном 85 кВт, загальна потужність 245 к.с.</p>
+                            <a href="#" class="btn btn-primary">Детальніше</a>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <img src="../car_DP_2023-main/site/img/opel.jpg" class="card-img-top" alt="Зображення автомобіля">
+                    <div class="card-body">
+                        <h5 class="card-title">Opel Astra 2005 5 300$</h5>
+                        <p class="card-text">192 тис. км., Бензин, 1.4л., Черкаси, Ручна коробка передач</p>
+                        <a href="#" class="btn btn-primary">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <img src="../car_DP_2023-main/site/img/skoda oktaiva.jpg" class="card-img-top" alt="Зображення автомобіля">
+                    <div class="card-body">
+                        <h5 class="card-title">Skoda Octavia 2016 12 400$</h5>
+                        <p class="card-text">288 тис. км., Дизель, 1.6 л., Рівне, Автомат</p>
+                        <a href="#" class="btn btn-primary">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mx-6">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4 mx-6">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4 mx-6">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4 mx-8">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4 mx-8">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4 mx-8">
+                    <img src="../car_DP_2023-main/site/img/bmw_x7_2023_2.jpg" alt="Photo 1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="container-slider">Автомобільні новини</h1>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="../car_DP_2023-main/site/img/mercedesbenz_sclass_w222_112850_1920x1080.jpg" alt="Слайд 1">
+            </div>
+            <div class="slide active">
+                <img src="../car_DP_2023-main/site/img/bmw_fary_podsvetka_137326_1920x1080.jpg" alt="Слайд 2">
+            </div>
+            <div class="slide active">
+                <img src="../car_DP_2023-main/site/img/audi rs.jpg" alt="Слайд 3">
+            </div>
+        </div>
+            <button class="prev-slide-btn">Попередній слайд</button>
+            <span class="arrow-left"><i class="fas fa-arrow-left"></i></span>
+            <button class="next-slide-btn">Наступний слайд</button>
+            <span class="arrow-right"><i class="fas fa-arrow-right"></i></span>
+
+    </div>
+        
+    <footer class="text-center">
+        <p>&copy; 2023 Всі права захищені</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../car_DP_2023-main/js/bootstrap.bundle.min.js"></script>
+    <script src="../car_DP_2023-main/js/script.js"></script>
+    <script src="https://fontawesome.com/icons?d=gallery&q=arrow"></script>
+    <script src=" https://fonts.google.com/icons?selected=Material+Icons%3Anavigate_before%7CMaterial+Icons%3Anavigate_next"></script>
+</body>
 </html>
